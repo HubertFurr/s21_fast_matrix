@@ -162,8 +162,7 @@ clean:
 
 rebuild: clean all
 
-cpplint: 
-	clang-format -i --verbose $(ALL_CPP_H_FILES)
+cpplint:
 	clang-format -n --verbose $(ALL_CPP_H_FILES)
 cppcheck:
 	cppcheck --enable=all --force --suppress=missingIncludeSystem --language=c++ $(ALL_CPP_H_FILES)

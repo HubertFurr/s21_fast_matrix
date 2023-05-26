@@ -50,9 +50,12 @@ TEST(TestExtra, TestOperatorBracketsParrot) {
 
 // Просто проверяем, что данные операции компилируются и выполняются
 TEST(TestExtra, TestConstRef1) {
-  s21::FastMatrix<float> result1 = s21::FastMatrix<float>(1, 1) + s21::FastMatrix<float>(1, 1);
-  s21::FastMatrix<float> result2 = s21::FastMatrix<float>(1, 1) - s21::FastMatrix<float>(1, 1);
-  s21::FastMatrix<float> result3 = s21::FastMatrix<float>(1, 1) * s21::FastMatrix<float>(1, 1);
+  s21::FastMatrix<float> result1 =
+      s21::FastMatrix<float>(1, 1) + s21::FastMatrix<float>(1, 1);
+  s21::FastMatrix<float> result2 =
+      s21::FastMatrix<float>(1, 1) - s21::FastMatrix<float>(1, 1);
+  s21::FastMatrix<float> result3 =
+      s21::FastMatrix<float>(1, 1) * s21::FastMatrix<float>(1, 1);
   bool result4 = s21::FastMatrix<float>(1, 1) == s21::FastMatrix<float>(1, 1);
   s21::FastMatrix<float> result5 = s21::FastMatrix<float>(1, 1) * 2.0;
   s21::FastMatrix<float> result6 = 2.0 * s21::FastMatrix<float>(1, 1);

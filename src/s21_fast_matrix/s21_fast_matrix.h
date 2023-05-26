@@ -60,19 +60,19 @@ class FastMatrix {
     if (rows_ < 0 || cols_ < 0) {
       throw std::length_error("Matrix size must be greater or equal than 0");
     }
-    matrix_ = new float[rows_ * cols_]{};
+    matrix_ = new Type[rows_ * cols_]{};
   }
 
   /**
    * @brief Параметризованный конструктор (Parameterized Constructor).
    * Создает объект FastMatrix размером [rows x cols], заполненный value
    */
-  explicit FastMatrix(int rows, int cols, float value)
+  explicit FastMatrix(int rows, int cols, Type value)
       : rows_(rows), cols_(cols) {
     if (rows_ < 0 || cols_ < 0) {
       throw std::length_error("Matrix size must be greater or equal than 0");
     }
-    matrix_ = new float[rows_ * cols_];
+    matrix_ = new Type[rows_ * cols_];
     std::fill(matrix_, matrix_ + rows_ * cols_, value);
   }
 
@@ -83,9 +83,9 @@ class FastMatrix {
   FastMatrix(const FastMatrix& other)
       : rows_(other.rows_),
         cols_(other.cols_),
-        matrix_(new float[rows_ * cols_]) {
+        matrix_(new Type[rows_ * cols_]) {
     std::copy(other.matrix_, other.matrix_ + rows_ * cols_, matrix_);
-    // std::memcpy(matrix_, other.matrix_, rows_ * cols_ * sizeof(float));
+    // std::memcpy(matrix_, other.matrix_, rows_ * cols_ * sizeof(Type));
     // std::copy_n(other.matrix_, rows_ * cols_, matrix_);
   }
 
@@ -187,7 +187,7 @@ class FastMatrix {
    *
    * @param number 2й множитель (число)
    */
-  void MulNumber(const float number) noexcept {
+  void MulNumber(const Type number) noexcept {
     for (int i = 0, size = rows_ * cols_; i < size; ++i) {
       matrix_[i] *= number;
     }
@@ -424,36 +424,36 @@ class FastMatrix {
    *
    * В целом метод по своей сути аналогичен std::vector::data()
    *
-   * @return float* Указатель на базовое хранилище элементов. Для непустых
+   * @return Type* Указатель на базовое хранилище элементов. Для непустых
    * контейнеров возвращаемый указатель сравнивается с адресом первого элемента.
    */
-  float* data() noexcept { return matrix_; }
+  Type* data() noexcept { return matrix_; }
 
   /**
    * @brief Индексация по элементам матрицы (строка row, колонка col).
    *
    * @param row номер столбца запрашиваемого элемента
    * @param col номер строки запрашиваемого элемента
-   * @return float& ссылка на значение (row, col)
+   * @return Type& ссылка на значение (row, col)
    */
-  float& operator()(int row, int col) & {
-    return const_cast<float&>(GetMatrixElement(row, col));
+  Type& operator()(int row, int col) & {
+    return const_cast<Type&>(GetMatrixElement(row, col));
   }
 
-  float& operator()(int row, int col) && = delete;
+  Type& operator()(int row, int col) && = delete;
 
   /**
    * @brief Индексация по элементам матрицы (строка row, колонка col).
    *
    * @param row номер столбца запрашиваемого элемента
    * @param col номер строки запрашиваемого элемента
-   * @return float& const-ссылка на значение (row, col)
+   * @return Type& const-ссылка на значение (row, col)
    */
-  const float& operator()(int row, int col) const& {
+  const Type& operator()(int row, int col) const& {
     return GetMatrixElement(row, col);
   }
 
-  const float& operator()(int row, int col) const&& = delete;
+  const Type& operator()(int row, int col) const&& = delete;
 
   /**
    * @brief Перегрузка оператора == для объекта
@@ -518,7 +518,7 @@ class FastMatrix {
    * @param number Число, на которое умножается объект
    * @return FastMatrix Результат умножения текущей матрицы на число
    */
-  FastMatrix operator*(float number) const noexcept {
+  FastMatrix operator*(Type number) const noexcept {
     FastMatrix tmp{*this};
     tmp.MulNumber(number);
     return tmp;
@@ -531,7 +531,7 @@ class FastMatrix {
    * @param matrix Объект FastMatrix, на который умножается число
    * @return FastMatrix Результат умножения числа на объект FastMatrix
    */
-  friend FastMatrix operator*(float number, const FastMatrix& matrix) noexcept {
+  friend FastMatrix operator*(Type number, const FastMatrix& matrix) noexcept {
     FastMatrix tmp = matrix * number;
     return tmp;
   }
@@ -542,7 +542,7 @@ class FastMatrix {
    * @param number Число, на которое умножается объект
    * @return FastMatrix& Результат умножения текущей матрицы на число
    */
-  FastMatrix& operator*=(float number) {
+  FastMatrix& operator*=(Type number) {
     MulNumber(number);
     return *this;
   }
@@ -601,7 +601,7 @@ class FastMatrix {
     matrix_ = nullptr;
   }
 
-  const float& GetMatrixElement(int row, int col) const {
+  const Type& GetMatrixElement(int row, int col) const {
     if (row >= rows_ || col >= cols_ || row < 0 || col < 0) {
       throw std::out_of_range("Incorrect input for (), index is out of range.");
     }
@@ -609,7 +609,7 @@ class FastMatrix {
   }
 
   int rows_, cols_;
-  float* matrix_;
+  Type* matrix_;
   // TODO: Специализации epsilon
   // https://stackoverflow.com/questions/22727850/creating-a-value-constant-that-depends-on-the-template-type)
   const float kEpsilon = 1e-6;
