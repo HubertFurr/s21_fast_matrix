@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                              ############       ####       */
 /*                                              ############       ####       */
-/*   s21_fast_matrix.h                                      ####       ####   */
+/*   fast_matrix.h                                          ####       ####   */
 /*                                                          ####       ####   */
 /*   By: hubertfu@student.21-school.ru              ########           ####   */
 /*                                                  ########           ####   */
@@ -12,7 +12,7 @@
 /* ************************************************************************** */
 
 /**
- * @file s21_fast_matrix.h
+ * @file fast_matrix.h
  * @author Hubert Furr (hubertfu@student.21-school.ru)
  * @brief Шаблонный класс матриц, реализующий быстрые операции над матрицами
  * (быстрее, чем CPP1_s21_matrix_plus).
@@ -378,8 +378,9 @@ class FastMatrix {
     std::vector<Type> tmp(cols_b * cols_a);
 
     for (int i = 0; i < cols_a; ++i) {
+      const Type* matrix_b_const = matrix_b + i * cols_b;
       for (int j = 0; j < cols_b; ++j) {
-        tmp[j * cols_a + i] = matrix_b[i * cols_b + j];
+        tmp[j * cols_a + i] = matrix_b_const[j];
       }
     }
 
