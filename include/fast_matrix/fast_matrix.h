@@ -14,7 +14,7 @@
 /**
  * @file s21_fast_matrix.h
  * @author Hubert Furr (hubertfu@student.21-school.ru)
- * @brief Шаблонный класс матриц, реализующий быстрые операции на матрицами
+ * @brief Шаблонный класс матриц, реализующий быстрые операции над матрицами
  * (быстрее, чем CPP1_s21_matrix_plus).
  * @version 1.0
  * @date 2023-05-24
@@ -23,9 +23,8 @@
  *
  */
 
-// TODO: fix guards?
-#ifndef S21_FAST_MATRIX_S21_FAST_MATRIX_S21_FAST_MATRIX_H_
-#define S21_FAST_MATRIX_S21_FAST_MATRIX_S21_FAST_MATRIX_H_
+#ifndef S21_FAST_MATRIX_FAST_MATRIX_H_
+#define S21_FAST_MATRIX_FAST_MATRIX_H_
 
 #include <algorithm>  // std::fill | std::copy
 #include <cmath>      // std::abs
@@ -359,7 +358,7 @@ class FastMatrix {
     }
   }
 
-  // TODO: add brief - cache-friendly версия с умножением транспонированием
+  // TODO: add brief - CPU cache-friendly версия с умножением транспонированием
   /**
    * @brief Метод для заполнения указателя matrix_result данными умножения
    * матрицы A на матрицу B (Вариант 4).
@@ -617,4 +616,4 @@ class FastMatrix {
 
 }  // namespace s21
 
-#endif  // S21_FAST_MATRIX_S21_FAST_MATRIX_S21_FAST_MATRIX_H_
+#endif  // S21_FAST_MATRIX_FAST_MATRIX_H_

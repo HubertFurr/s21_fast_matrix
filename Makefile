@@ -44,7 +44,7 @@ OBJ_DIR = obj
 GCOV_OBJ_DIR = obj/gcov
 TESTS_OBJ_DIR = obj/tests
 TEST_DIR = tests
-MODULES_DIR = include/s21_fast_matrix
+MODULES_DIR = include/fast_matrix
 REPORT_DIR = report
 
 #Цель и название исполняемого файла для тестов
@@ -123,7 +123,7 @@ $(GCOV_EXE): $(GCOV_OBJ_DIR) $(TESTS_OBJ_DIR) $(REPORT_DIR) $(ALL_MODULES_GCOV_O
 	@echo "\n-------------------------------------------------------------------------------------------------\n"
 	@./$(GCOV_EXE)
 	@gcov -o $(GCOV_OBJ_DIR) $(ALL_MODULES_H)
-	@lcov -b ./ -d $(GCOV_OBJ_DIR) --gcov-tool /usr/bin/gcov -c -o output.info --no-external --include */src/s21_fast_matrix/*.h 
+	@lcov -b ./ -d $(GCOV_OBJ_DIR) --gcov-tool /usr/bin/gcov -c -o output.info --no-external --include */include/fast_matrix/*.h 
 	@genhtml -o $(REPORT_DIR) output.info
 	@rm output.info
 	$(CMD_OPEN) $(REPORT_DIR)/index.html
@@ -162,7 +162,7 @@ clean:
 
 rebuild: clean all
 
-cpplint:
+lint:
 	clang-format -n --verbose $(ALL_CPP_H_FILES)
 cppcheck:
 	cppcheck --enable=all --force --suppress=missingIncludeSystem --language=c++ $(ALL_CPP_H_FILES)

@@ -1,9 +1,9 @@
-#ifndef S21_FAST_MATRIX_CHECK_CLASSES_RANDOM_SUITES_H_
-#define S21_FAST_MATRIX_CHECK_CLASSES_RANDOM_SUITES_H_
+#ifndef S21_FAST_MATRIX_TESTS_CLASSES_RANDOM_SUITES_H_
+#define S21_FAST_MATRIX_TESTS_CLASSES_RANDOM_SUITES_H_
 
 #include <gtest/gtest.h>
 
-#include "../../include/s21_fast_matrix/s21_fast_matrix.h"
+#include "../../include/fast_matrix/fast_matrix.h"
 #include "test_helper.h"
 
 template <typename Type>
@@ -38,4 +38,4 @@ class RandomMulMatrixRangeOne : public ::testing::TestWithParam<int> {
   s21::FastMatrix<Type> test_matrix_;
 };
 
-#endif  // S21_FAST_MATRIX_CHECK_CLASSES_RANDOM_SUITES_H_
+#endif  // S21_FAST_MATRIX_TESTS_CLASSES_RANDOM_SUITES_H_

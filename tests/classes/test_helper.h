@@ -1,7 +1,7 @@
-#ifndef S21_FAST_MATRIX_CHECK_CLASSES_TEST_HELPER_H_
-#define S21_FAST_MATRIX_CHECK_CLASSES_TEST_HELPER_H_
+#ifndef S21_FAST_MATRIX_TESTS_CLASSES_TEST_HELPER_H_
+#define S21_FAST_MATRIX_TESTS_CLASSES_TEST_HELPER_H_
 
-#include "../../include/s21_fast_matrix/s21_fast_matrix.h"
+#include "../../include/fast_matrix/fast_matrix.h"
 
 namespace s21_matrix_test_helper {
 
@@ -66,4 +66,4 @@ s21::FastMatrix<Type> GetIdentityMatrix(int size) {
 
 }  // namespace s21_matrix_test_helper
 
-#endif  // S21_FAST_MATRIX_CHECK_CLASSES_TEST_HELPER_H_
+#endif  // S21_FAST_MATRIX_TESTS_CLASSES_TEST_HELPER_H_
