@@ -3,7 +3,7 @@
 
 #include <gtest/gtest.h>
 
-#include "../../s21_fast_matrix/s21_fast_matrix.h"
+#include "../../include/s21_fast_matrix/s21_fast_matrix.h"
 #include "test_helper.h"
 
 template <typename Type>

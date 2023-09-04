@@ -1,7 +1,7 @@
 #ifndef S21_FAST_MATRIX_CHECK_CLASSES_TEST_HELPER_H_
 #define S21_FAST_MATRIX_CHECK_CLASSES_TEST_HELPER_H_
 
-#include "../../s21_fast_matrix/s21_fast_matrix.h"
+#include "../../include/s21_fast_matrix/s21_fast_matrix.h"
 
 namespace s21_matrix_test_helper {
 

@@ -43,8 +43,8 @@ CC=g++
 OBJ_DIR = obj
 GCOV_OBJ_DIR = obj/gcov
 TESTS_OBJ_DIR = obj/tests
-TEST_DIR = check
-MODULES_DIR = s21_fast_matrix
+TEST_DIR = tests
+MODULES_DIR = include/s21_fast_matrix
 REPORT_DIR = report
 
 #Цель и название исполняемого файла для тестов
