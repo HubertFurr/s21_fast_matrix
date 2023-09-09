@@ -60,8 +60,8 @@ TEST(TestSum, TestSumFunctionException5) {
   s21::FastMatrix<float> matrix1{2, 2};
   s21::FastMatrix<float> matrix2{2, 3};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -76,8 +76,8 @@ TEST(TestSum, TestSumFunctionException6) {
   s21::FastMatrix<float> matrix1{2, 2};
   s21::FastMatrix<float> matrix2{3, 2};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -92,8 +92,8 @@ TEST(TestSum, TestSumFunctionException7) {
   s21::FastMatrix<float> matrix1{3, 2};
   s21::FastMatrix<float> matrix2{2, 2};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -108,8 +108,8 @@ TEST(TestSum, TestSumFunctionException8) {
   s21::FastMatrix<float> matrix1{2, 3};
   s21::FastMatrix<float> matrix2{2, 2};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -180,8 +180,8 @@ TEST(TestSum, TestSumOperatorException5) {
   s21::FastMatrix<float> matrix1{2, 2};
   s21::FastMatrix<float> matrix2{2, 3};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -196,8 +196,8 @@ TEST(TestSum, TestSumOperatorException6) {
   s21::FastMatrix<float> matrix1{2, 2};
   s21::FastMatrix<float> matrix2{3, 2};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -212,8 +212,8 @@ TEST(TestSum, TestSumOperatorException7) {
   s21::FastMatrix<float> matrix1{3, 2};
   s21::FastMatrix<float> matrix2{2, 2};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -228,8 +228,8 @@ TEST(TestSum, TestSumOperatorException8) {
   s21::FastMatrix<float> matrix1{2, 3};
   s21::FastMatrix<float> matrix2{2, 2};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -296,8 +296,8 @@ TEST(TestSum, TestSumOperatorException13) {
   s21::FastMatrix<float> matrix1{2, 2};
   s21::FastMatrix<float> matrix2{2, 3};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -312,8 +312,8 @@ TEST(TestSum, TestSumOperatorException14) {
   s21::FastMatrix<float> matrix1{2, 2};
   s21::FastMatrix<float> matrix2{3, 2};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -328,8 +328,8 @@ TEST(TestSum, TestSumOperatorException15) {
   s21::FastMatrix<float> matrix1{3, 2};
   s21::FastMatrix<float> matrix2{2, 2};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -344,8 +344,8 @@ TEST(TestSum, TestSumOperatorException16) {
   s21::FastMatrix<float> matrix1{2, 3};
   s21::FastMatrix<float> matrix2{2, 2};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -369,16 +369,16 @@ TEST(TestSum, TestSum1) {
   EXPECT_EQ(matrix2.get_rows(), 95);
   EXPECT_EQ(matrix2.get_cols(), 99);
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 2.5);
-  s21_matrix_test_helper::FillMatrix(matrix2, 3.5);
+  s21_matrix_test_helper::FillMatrix(matrix1, 2.5f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 3.5f);
 
   matrix1.SumMatrix(matrix2);
 
-  s21_matrix_test_helper::CheckMatrix(matrix1, 2.5 + 3.5);
+  s21_matrix_test_helper::CheckMatrix(matrix1, 2.5f + 3.5f);
 
   matrix2.SumMatrix(matrix1);
 
-  s21_matrix_test_helper::CheckMatrix(matrix2, 3.5 + 2.5 + 3.5);
+  s21_matrix_test_helper::CheckMatrix(matrix2, 3.5f + 2.5f + 3.5f);
 }
 
 TEST(TestSum, TestSum2) {
@@ -390,16 +390,16 @@ TEST(TestSum, TestSum2) {
   EXPECT_EQ(matrix2.get_rows(), 99);
   EXPECT_EQ(matrix2.get_cols(), 99);
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 2.5);
-  s21_matrix_test_helper::FillMatrix(matrix2, -2.5);
+  s21_matrix_test_helper::FillMatrix(matrix1, 2.5f);
+  s21_matrix_test_helper::FillMatrix(matrix2, -2.5f);
 
   matrix1.SumMatrix(matrix2);
 
-  s21_matrix_test_helper::CheckMatrix(matrix1, 0.0);
+  s21_matrix_test_helper::CheckMatrix(matrix1, 0.0f);
 
   matrix2.SumMatrix(matrix1);
 
-  s21_matrix_test_helper::CheckMatrix(matrix2, -2.5);
+  s21_matrix_test_helper::CheckMatrix(matrix2, -2.5f);
 }
 
 TEST(TestSum, TestSum3) {
@@ -505,8 +505,8 @@ TEST(TestSum, TestSumOperation1) {
   EXPECT_EQ(matrix2.get_rows(), 95);
   EXPECT_EQ(matrix2.get_cols(), 99);
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 2.5);
-  s21_matrix_test_helper::FillMatrix(matrix2, 3.5);
+  s21_matrix_test_helper::FillMatrix(matrix1, 2.5f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 3.5f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -514,7 +514,7 @@ TEST(TestSum, TestSumOperation1) {
 
   EXPECT_EQ(result.get_rows(), 95);
   EXPECT_EQ(result.get_cols(), 99);
-  s21_matrix_test_helper::CheckMatrix(result, 2.5 + 3.5);
+  s21_matrix_test_helper::CheckMatrix(result, 2.5f + 3.5f);
   EXPECT_TRUE(matrix1_before == matrix1);
   EXPECT_TRUE(matrix2_before == matrix2);
 }
@@ -528,8 +528,8 @@ TEST(TestSum, TestSumOperation2) {
   EXPECT_EQ(matrix2.get_rows(), 99);
   EXPECT_EQ(matrix2.get_cols(), 99);
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 2.5);
-  s21_matrix_test_helper::FillMatrix(matrix2, -2.5);
+  s21_matrix_test_helper::FillMatrix(matrix1, 2.5f);
+  s21_matrix_test_helper::FillMatrix(matrix2, -2.5f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -537,7 +537,7 @@ TEST(TestSum, TestSumOperation2) {
 
   EXPECT_EQ(result.get_rows(), 99);
   EXPECT_EQ(result.get_cols(), 99);
-  s21_matrix_test_helper::CheckMatrix(result, 0.0);
+  s21_matrix_test_helper::CheckMatrix(result, 0.0f);
   EXPECT_TRUE(matrix1_before == matrix1);
   EXPECT_TRUE(matrix2_before == matrix2);
 }
@@ -655,8 +655,8 @@ TEST(TestSum, TestSumOperation5) {
   EXPECT_EQ(matrix2.get_rows(), 95);
   EXPECT_EQ(matrix2.get_cols(), 99);
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 2.5);
-  s21_matrix_test_helper::FillMatrix(matrix2, 3.5);
+  s21_matrix_test_helper::FillMatrix(matrix1, 2.5f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 3.5f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -666,13 +666,13 @@ TEST(TestSum, TestSumOperation5) {
 
   EXPECT_EQ(result.get_rows(), 95);
   EXPECT_EQ(result.get_cols(), 99);
-  s21_matrix_test_helper::CheckMatrix(result, 2.5);
+  s21_matrix_test_helper::CheckMatrix(result, 2.5f);
 
   result += matrix2;
 
   EXPECT_EQ(result.get_rows(), 95);
   EXPECT_EQ(result.get_cols(), 99);
-  s21_matrix_test_helper::CheckMatrix(result, 2.5 + 3.5);
+  s21_matrix_test_helper::CheckMatrix(result, 2.5f + 3.5f);
 
   EXPECT_TRUE(matrix1_before == matrix1);
   EXPECT_TRUE(matrix2_before == matrix2);
@@ -687,8 +687,8 @@ TEST(TestSum, TestSumOperation6) {
   EXPECT_EQ(matrix2.get_rows(), 99);
   EXPECT_EQ(matrix2.get_cols(), 99);
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 2.5);
-  s21_matrix_test_helper::FillMatrix(matrix2, -2.5);
+  s21_matrix_test_helper::FillMatrix(matrix1, 2.5f);
+  s21_matrix_test_helper::FillMatrix(matrix2, -2.5f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -698,13 +698,13 @@ TEST(TestSum, TestSumOperation6) {
 
   EXPECT_EQ(result.get_rows(), 99);
   EXPECT_EQ(result.get_cols(), 99);
-  s21_matrix_test_helper::CheckMatrix(result, 2.5);
+  s21_matrix_test_helper::CheckMatrix(result, 2.5f);
 
   result += matrix2;
 
   EXPECT_EQ(result.get_rows(), 99);
   EXPECT_EQ(result.get_cols(), 99);
-  s21_matrix_test_helper::CheckMatrix(result, 0.0);
+  s21_matrix_test_helper::CheckMatrix(result, 0.0f);
 
   EXPECT_TRUE(matrix1_before == matrix1);
   EXPECT_TRUE(matrix2_before == matrix2);

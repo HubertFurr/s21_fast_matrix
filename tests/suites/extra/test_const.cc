@@ -13,7 +13,7 @@ TEST(TestConst, TestConstructorParamsConst) {
   EXPECT_EQ(matrix_check.get_rows(), 4);
   EXPECT_EQ(matrix_check.get_cols(), 5);
 
-  s21_matrix_test_helper::CheckMatrix(matrix_check, 0.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_check, 0.0f);
 }
 
 TEST(TestConst, TestConstructorCopyConst1) {
@@ -32,8 +32,8 @@ TEST(TestConst, TestConstructorCopyConst1) {
   EXPECT_EQ(matrix_copy.get_cols(), 2);
   EXPECT_EQ(matrix_copy.get_rows(), 2);
 
-  s21_matrix_test_helper::CheckMatrix(matrix_check, 4.0);
-  s21_matrix_test_helper::CheckMatrix(matrix_copy, 4.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_check, 4.0f);
+  s21_matrix_test_helper::CheckMatrix(matrix_copy, 4.0f);
 }
 
 TEST(TestConst, TestConstructorCopyConst2) {
@@ -52,13 +52,13 @@ TEST(TestConst, TestConstructorCopyConst2) {
   EXPECT_EQ(matrix_copy.get_cols(), 2);
   EXPECT_EQ(matrix_copy.get_rows(), 2);
 
-  s21_matrix_test_helper::CheckMatrix(matrix_check, 4.0);
-  s21_matrix_test_helper::CheckMatrix(matrix_copy, 4.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_check, 4.0f);
+  s21_matrix_test_helper::CheckMatrix(matrix_copy, 4.0f);
 }
 
 TEST(TestConst, TestConstructorMoveConst1) {
   s21::FastMatrix<float> matrix_test{14, 14};
-  s21_matrix_test_helper::FillMatrix(matrix_test, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix_test, 2.0f);
 
   const s21::FastMatrix<float> matrix_check = std::move(matrix_test);
 
@@ -67,12 +67,12 @@ TEST(TestConst, TestConstructorMoveConst1) {
   EXPECT_EQ(matrix_test.get_rows(), 0);
   EXPECT_EQ(matrix_test.get_rows(), 0);
 
-  s21_matrix_test_helper::CheckMatrix(matrix_check, 2.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_check, 2.0f);
 }
 
 TEST(TestConst, TestConstructorMoveConst2) {
   s21::FastMatrix<float> matrix_test{14, 14};
-  s21_matrix_test_helper::FillMatrix(matrix_test, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix_test, 2.0f);
 
   const s21::FastMatrix<float> matrix_check(std::move(matrix_test));
 
@@ -81,7 +81,7 @@ TEST(TestConst, TestConstructorMoveConst2) {
   EXPECT_EQ(matrix_test.get_rows(), 0);
   EXPECT_EQ(matrix_test.get_rows(), 0);
 
-  s21_matrix_test_helper::CheckMatrix(matrix_check, 2.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_check, 2.0f);
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -192,7 +192,7 @@ TEST(TestConst, TestSumConst1) {
 
   matrix1.SumMatrix(matrix2_const);
 
-  s21_matrix_test_helper::CheckMatrix(matrix1, 5);
+  s21_matrix_test_helper::CheckMatrix(matrix1, 5.0f);
   EXPECT_TRUE(matrix2_before == matrix2_const);
 }
 
@@ -226,7 +226,7 @@ TEST(TestConst, TestSumConst2) {
   EXPECT_EQ(result.get_cols(), 2);
   EXPECT_EQ(result.get_rows(), 2);
 
-  s21_matrix_test_helper::CheckMatrix(result, 5);
+  s21_matrix_test_helper::CheckMatrix(result, 5.0f);
   EXPECT_TRUE(matrix1_before == matrix1_const);
   EXPECT_TRUE(matrix2_before == matrix2_const);
 }
@@ -266,7 +266,7 @@ TEST(TestConst, TestSumConst3) {
 
   EXPECT_EQ(result.get_cols(), 2);
   EXPECT_EQ(result.get_rows(), 2);
-  s21_matrix_test_helper::CheckMatrix(result, 5);
+  s21_matrix_test_helper::CheckMatrix(result, 5.0f);
   EXPECT_TRUE(matrix1_before == matrix1_const);
   EXPECT_TRUE(matrix2_before == matrix2_const);
 }
@@ -299,7 +299,7 @@ TEST(TestConst, TestSubConst1) {
 
   matrix1.SubMatrix(matrix2_const);
 
-  s21_matrix_test_helper::CheckMatrix(matrix1, 5);
+  s21_matrix_test_helper::CheckMatrix(matrix1, 5.0f);
   EXPECT_TRUE(matrix2_before == matrix2_const);
 }
 
@@ -333,7 +333,7 @@ TEST(TestConst, TestSubConst2) {
   EXPECT_EQ(result.get_cols(), 2);
   EXPECT_EQ(result.get_rows(), 2);
 
-  s21_matrix_test_helper::CheckMatrix(result, 5);
+  s21_matrix_test_helper::CheckMatrix(result, 5.0f);
   EXPECT_TRUE(matrix1_before == matrix1_const);
   EXPECT_TRUE(matrix2_before == matrix2_const);
 }
@@ -367,13 +367,13 @@ TEST(TestConst, TestSubConst3) {
 
   EXPECT_EQ(result.get_cols(), 2);
   EXPECT_EQ(result.get_rows(), 2);
-  s21_matrix_test_helper::CheckMatrix(result, -2);
+  s21_matrix_test_helper::CheckMatrix(result, -2.0f);
 
   result -= matrix2_const;
 
   EXPECT_EQ(result.get_cols(), 2);
   EXPECT_EQ(result.get_rows(), 2);
-  s21_matrix_test_helper::CheckMatrix(result, 2);
+  s21_matrix_test_helper::CheckMatrix(result, 2.0f);
   EXPECT_TRUE(matrix1_before == matrix1_const);
   EXPECT_TRUE(matrix2_before == matrix2_const);
 }
@@ -585,11 +585,11 @@ TEST(TestConst, TestTransposeConst1) {
   EXPECT_EQ(result_check.get_rows(), 99);
   EXPECT_EQ(result_check.get_cols(), 1);
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.99);
-  s21_matrix_test_helper::FillMatrix(result_check, 1.99);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.99f);
+  s21_matrix_test_helper::FillMatrix(result_check, 1.99f);
 
-  s21_matrix_test_helper::CheckMatrix(matrix1, 1.99);
-  s21_matrix_test_helper::CheckMatrix(result_check, 1.99);
+  s21_matrix_test_helper::CheckMatrix(matrix1, 1.99f);
+  s21_matrix_test_helper::CheckMatrix(result_check, 1.99f);
 
   const s21::FastMatrix<float> const_matrix1 = matrix1;
   const s21::FastMatrix<float> const_result_check = result_check;

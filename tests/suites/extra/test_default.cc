@@ -15,19 +15,19 @@ TEST(TestDefault, TestConstructorBasicConst1) {
   EXPECT_EQ(matrix_check.get_rows(), 0);
   EXPECT_EQ(matrix_check.get_cols(), 0);
 
-  s21_matrix_test_helper::CheckMatrix(matrix_check, 0.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_check, 0.0f);
 
   s21::FastMatrix<float> matrix_copy{matrix_check};
 
   EXPECT_EQ(matrix_copy.get_rows(), 0);
   EXPECT_EQ(matrix_copy.get_cols(), 0);
-  s21_matrix_test_helper::CheckMatrix(matrix_copy, 0.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_copy, 0.0f);
 
   // Интересный факт - в данном случае используется конструктор копирования
   s21::FastMatrix<float> matrix_move{std::move(matrix_check)};
   EXPECT_EQ(matrix_move.get_rows(), 0);
   EXPECT_EQ(matrix_move.get_cols(), 0);
-  s21_matrix_test_helper::CheckMatrix(matrix_move, 0.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_move, 0.0f);
 }
 
 TEST(TestDefault, TestConstructorBasic1) {
@@ -35,18 +35,18 @@ TEST(TestDefault, TestConstructorBasic1) {
   EXPECT_EQ(matrix_check.get_rows(), 0);
   EXPECT_EQ(matrix_check.get_cols(), 0);
 
-  s21_matrix_test_helper::CheckMatrix(matrix_check, 0.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_check, 0.0f);
 
   s21::FastMatrix<float> matrix_copy{matrix_check};
 
   EXPECT_EQ(matrix_copy.get_rows(), 0);
   EXPECT_EQ(matrix_copy.get_cols(), 0);
-  s21_matrix_test_helper::CheckMatrix(matrix_copy, 0.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_copy, 0.0f);
 
   s21::FastMatrix<float> matrix_move{std::move(matrix_check)};
   EXPECT_EQ(matrix_move.get_rows(), 0);
   EXPECT_EQ(matrix_move.get_cols(), 0);
-  s21_matrix_test_helper::CheckMatrix(matrix_move, 0.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_move, 0.0f);
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -62,8 +62,8 @@ TEST(TestDefault, TestAssignmentCopy1) {
   EXPECT_EQ(matrix_check.get_rows(), 0);
   EXPECT_EQ(matrix_check.get_cols(), 0);
 
-  s21_matrix_test_helper::CheckMatrix(matrix_test, 0.0);
-  s21_matrix_test_helper::CheckMatrix(matrix_check, 0.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_test, 0.0f);
+  s21_matrix_test_helper::CheckMatrix(matrix_check, 0.0f);
 
   matrix_test = matrix_check;
 
@@ -72,8 +72,8 @@ TEST(TestDefault, TestAssignmentCopy1) {
   EXPECT_EQ(matrix_check.get_rows(), 0);
   EXPECT_EQ(matrix_check.get_cols(), 0);
 
-  s21_matrix_test_helper::CheckMatrix(matrix_test, 0.0);
-  s21_matrix_test_helper::CheckMatrix(matrix_check, 0.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_test, 0.0f);
+  s21_matrix_test_helper::CheckMatrix(matrix_check, 0.0f);
 }
 
 TEST(TestDefault, TestAssignmentMove1) {
@@ -85,16 +85,16 @@ TEST(TestDefault, TestAssignmentMove1) {
   EXPECT_EQ(matrix_check.get_rows(), 0);
   EXPECT_EQ(matrix_check.get_cols(), 0);
 
-  s21_matrix_test_helper::CheckMatrix(matrix_test, 0.0);
-  s21_matrix_test_helper::CheckMatrix(matrix_check, 0.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_test, 0.0f);
+  s21_matrix_test_helper::CheckMatrix(matrix_check, 0.0f);
 
   matrix_test = std::move(matrix_check);
 
   EXPECT_EQ(matrix_test.get_rows(), 0);
   EXPECT_EQ(matrix_test.get_cols(), 0);
 
-  s21_matrix_test_helper::CheckMatrix(matrix_test, 0.0);
-  s21_matrix_test_helper::CheckMatrix(matrix_check, 0.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_test, 0.0f);
+  s21_matrix_test_helper::CheckMatrix(matrix_check, 0.0f);
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *

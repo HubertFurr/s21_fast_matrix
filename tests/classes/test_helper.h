@@ -32,7 +32,7 @@ s21::FastMatrix<Type> GetRandMatrix(int rows, int cols, double min,
 }
 
 template <typename Type>
-void FillMatrix(s21::FastMatrix<Type>& matrix, double value) {
+void FillMatrix(s21::FastMatrix<Type>& matrix, Type value) {
   for (int i = 0; i < matrix.get_rows(); ++i) {
     for (int j = 0; j < matrix.get_cols(); ++j) {
       matrix(i, j) = value;
@@ -41,7 +41,7 @@ void FillMatrix(s21::FastMatrix<Type>& matrix, double value) {
 }
 
 template <typename Type>
-void CheckMatrix(const s21::FastMatrix<Type>& matrix, double value) {
+void CheckMatrix(const s21::FastMatrix<Type>& matrix, Type value) {
   for (int i = 0; i < matrix.get_rows(); ++i) {
     for (int j = 0; j < matrix.get_cols(); ++j) {
       ASSERT_NEAR(matrix(i, j), value, s21_matrix_test_helper::kEpsilon);

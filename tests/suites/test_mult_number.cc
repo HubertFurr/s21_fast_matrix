@@ -10,17 +10,17 @@ TEST(TestMulNumber, TestMulNumber1) {
   EXPECT_EQ(matrix1.get_rows(), 95);
   EXPECT_EQ(matrix1.get_cols(), 99);
 
-  double number = 2.0;
+  float number = 2.0;
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 2.5);
-
-  matrix1.MulNumber(number);
-
-  s21_matrix_test_helper::CheckMatrix(matrix1, 2.5 * number);
+  s21_matrix_test_helper::FillMatrix(matrix1, 2.5f);
 
   matrix1.MulNumber(number);
 
-  s21_matrix_test_helper::CheckMatrix(matrix1, 2.5 * number * number);
+  s21_matrix_test_helper::CheckMatrix(matrix1, 2.5f * number);
+
+  matrix1.MulNumber(number);
+
+  s21_matrix_test_helper::CheckMatrix(matrix1, 2.5f * number * number);
 }
 
 TEST(TestMulNumber, TestMulNumber2) {
@@ -28,17 +28,17 @@ TEST(TestMulNumber, TestMulNumber2) {
   EXPECT_EQ(matrix1.get_rows(), 99);
   EXPECT_EQ(matrix1.get_cols(), 99);
 
-  double number = -2.5;
+  float number = -2.5;
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 2.5);
-
-  matrix1.MulNumber(number);
-
-  s21_matrix_test_helper::CheckMatrix(matrix1, 2.5 * number);
+  s21_matrix_test_helper::FillMatrix(matrix1, 2.5f);
 
   matrix1.MulNumber(number);
 
-  s21_matrix_test_helper::CheckMatrix(matrix1, 2.5 * number * number);
+  s21_matrix_test_helper::CheckMatrix(matrix1, 2.5f * number);
+
+  matrix1.MulNumber(number);
+
+  s21_matrix_test_helper::CheckMatrix(matrix1, 2.5f * number * number);
 }
 
 TEST(TestMulNumber, TestMulNumber3) {
@@ -46,17 +46,17 @@ TEST(TestMulNumber, TestMulNumber3) {
   EXPECT_EQ(matrix1.get_rows(), 199);
   EXPECT_EQ(matrix1.get_cols(), 1);
 
-  double number = -2.999;
+  float number = -2.999;
 
-  s21_matrix_test_helper::FillMatrix(matrix1, -1.999);
-
-  matrix1.MulNumber(number);
-
-  s21_matrix_test_helper::CheckMatrix(matrix1, -1.999 * number);
+  s21_matrix_test_helper::FillMatrix(matrix1, -1.999f);
 
   matrix1.MulNumber(number);
 
-  s21_matrix_test_helper::CheckMatrix(matrix1, -1.999 * number * number);
+  s21_matrix_test_helper::CheckMatrix(matrix1, -1.999f * number);
+
+  matrix1.MulNumber(number);
+
+  s21_matrix_test_helper::CheckMatrix(matrix1, -1.999f * number * number);
 }
 
 TEST(TestMulNumber, TestMulNumber4) {
@@ -64,17 +64,17 @@ TEST(TestMulNumber, TestMulNumber4) {
   EXPECT_EQ(matrix1.get_rows(), 1);
   EXPECT_EQ(matrix1.get_cols(), 199);
 
-  double number = 2.5999;
+  float number = 2.5999;
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.5999);
-
-  matrix1.MulNumber(number);
-
-  s21_matrix_test_helper::CheckMatrix(matrix1, 1.5999 * number);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.5999f);
 
   matrix1.MulNumber(number);
 
-  s21_matrix_test_helper::CheckMatrix(matrix1, 1.5999 * number * number);
+  s21_matrix_test_helper::CheckMatrix(matrix1, 1.5999f * number);
+
+  matrix1.MulNumber(number);
+
+  s21_matrix_test_helper::CheckMatrix(matrix1, 1.5999f * number * number);
 }
 
 TEST(TestMulNumber, TestMulNumber5) {
@@ -86,7 +86,7 @@ TEST(TestMulNumber, TestMulNumber5) {
   EXPECT_EQ(check_matrix.get_rows(), 4);
   EXPECT_EQ(check_matrix.get_cols(), 3);
 
-  double number = 1.99;
+  float number = 1.99;
 
   matrix1(0, 0) = 1.5;
   matrix1(0, 1) = 2.5;
@@ -128,7 +128,7 @@ TEST(TestMulNumber, TestMulNumber6) {
   EXPECT_EQ(check_matrix.get_rows(), 2);
   EXPECT_EQ(check_matrix.get_cols(), 2);
 
-  double number = -9.87;
+  float number = -9.87;
 
   matrix1(0, 0) = 14.58;
   matrix1(0, 1) = -45;
@@ -154,18 +154,18 @@ TEST(TestMulNumber, TestMulNumberOperator1) {
   EXPECT_EQ(matrix1.get_rows(), 95);
   EXPECT_EQ(matrix1.get_cols(), 99);
 
-  double number = 2.0;
+  float number = 2.0;
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 2.5);
+  s21_matrix_test_helper::FillMatrix(matrix1, 2.5f);
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> result1 = matrix1 * number;
   s21::FastMatrix<float> result2 = number * matrix1;
   s21::FastMatrix<float> result3 = matrix1;
   result3 *= number;
 
-  s21_matrix_test_helper::CheckMatrix(result1, 2.5 * number);
-  s21_matrix_test_helper::CheckMatrix(result2, 2.5 * number);
-  s21_matrix_test_helper::CheckMatrix(result3, 2.5 * number);
+  s21_matrix_test_helper::CheckMatrix(result1, 2.5f * number);
+  s21_matrix_test_helper::CheckMatrix(result2, 2.5f * number);
+  s21_matrix_test_helper::CheckMatrix(result3, 2.5f * number);
   EXPECT_TRUE(matrix1_before == matrix1);
 }
 
@@ -174,18 +174,18 @@ TEST(TestMulNumber, TestMulNumberOperator2) {
   EXPECT_EQ(matrix1.get_rows(), 99);
   EXPECT_EQ(matrix1.get_cols(), 99);
 
-  double number = -2.5;
+  float number = -2.5;
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 2.5);
+  s21_matrix_test_helper::FillMatrix(matrix1, 2.5f);
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> result1 = matrix1 * number;
   s21::FastMatrix<float> result2 = number * matrix1;
   s21::FastMatrix<float> result3 = matrix1;
   result3 *= number;
 
-  s21_matrix_test_helper::CheckMatrix(result1, 2.5 * number);
-  s21_matrix_test_helper::CheckMatrix(result2, 2.5 * number);
-  s21_matrix_test_helper::CheckMatrix(result3, 2.5 * number);
+  s21_matrix_test_helper::CheckMatrix(result1, 2.5f * number);
+  s21_matrix_test_helper::CheckMatrix(result2, 2.5f * number);
+  s21_matrix_test_helper::CheckMatrix(result3, 2.5f * number);
   EXPECT_TRUE(matrix1_before == matrix1);
 }
 
@@ -194,18 +194,18 @@ TEST(TestMulNumber, TestMulNumberOperator3) {
   EXPECT_EQ(matrix1.get_rows(), 199);
   EXPECT_EQ(matrix1.get_cols(), 1);
 
-  double number = -2.999;
+  float number = -2.999;
 
-  s21_matrix_test_helper::FillMatrix(matrix1, -1.999);
+  s21_matrix_test_helper::FillMatrix(matrix1, -1.999f);
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> result1 = matrix1 * number;
   s21::FastMatrix<float> result2 = number * matrix1;
   s21::FastMatrix<float> result3 = matrix1;
   result3 *= number;
 
-  s21_matrix_test_helper::CheckMatrix(result1, -1.999 * number);
-  s21_matrix_test_helper::CheckMatrix(result2, -1.999 * number);
-  s21_matrix_test_helper::CheckMatrix(result3, -1.999 * number);
+  s21_matrix_test_helper::CheckMatrix(result1, -1.999f * number);
+  s21_matrix_test_helper::CheckMatrix(result2, -1.999f * number);
+  s21_matrix_test_helper::CheckMatrix(result3, -1.999f * number);
   EXPECT_TRUE(matrix1_before == matrix1);
 }
 
@@ -214,18 +214,18 @@ TEST(TestMulNumber, TestMulNumberOperator4) {
   EXPECT_EQ(matrix1.get_rows(), 1);
   EXPECT_EQ(matrix1.get_cols(), 199);
 
-  double number = 2.5999;
+  float number = 2.5999;
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.5999);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.5999f);
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> result1 = matrix1 * number;
   s21::FastMatrix<float> result2 = number * matrix1;
   s21::FastMatrix<float> result3 = matrix1;
   result3 *= number;
 
-  s21_matrix_test_helper::CheckMatrix(result1, 1.5999 * number);
-  s21_matrix_test_helper::CheckMatrix(result2, 1.5999 * number);
-  s21_matrix_test_helper::CheckMatrix(result3, 1.5999 * number);
+  s21_matrix_test_helper::CheckMatrix(result1, 1.5999f * number);
+  s21_matrix_test_helper::CheckMatrix(result2, 1.5999f * number);
+  s21_matrix_test_helper::CheckMatrix(result3, 1.5999f * number);
   EXPECT_TRUE(matrix1_before == matrix1);
 }
 
@@ -238,7 +238,7 @@ TEST(TestMulNumber, TestMulNumberOperator5) {
   EXPECT_EQ(check_matrix.get_rows(), 4);
   EXPECT_EQ(check_matrix.get_cols(), 3);
 
-  double number = 1.99;
+  float number = 1.99;
 
   matrix1(0, 0) = 1.5;
   matrix1(0, 1) = 2.5;
@@ -287,7 +287,7 @@ TEST(TestMulNumber, TestMulNumberOperator6) {
   EXPECT_EQ(check_matrix.get_rows(), 2);
   EXPECT_EQ(check_matrix.get_cols(), 2);
 
-  double number = -9.87;
+  float number = -9.87;
 
   matrix1(0, 0) = 14.58;
   matrix1(0, 1) = -45;

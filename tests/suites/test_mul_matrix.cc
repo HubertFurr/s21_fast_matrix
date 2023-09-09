@@ -61,8 +61,8 @@ TEST(TestMulMatrix, TestMulMatrixFunctionException5) {
   s21::FastMatrix<float> matrix1{3, 2};
   s21::FastMatrix<float> matrix2{3, 2};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -77,8 +77,8 @@ TEST(TestMulMatrix, TestMulMatrixFunctionException6) {
   s21::FastMatrix<float> matrix1{2, 3};
   s21::FastMatrix<float> matrix2{2, 3};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -93,8 +93,8 @@ TEST(TestMulMatrix, TestMulMatrixFunctionException7) {
   s21::FastMatrix<float> matrix1{3, 3};
   s21::FastMatrix<float> matrix2{2, 2};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -109,8 +109,8 @@ TEST(TestMulMatrix, TestMulMatrixFunctionException8) {
   s21::FastMatrix<float> matrix1{2, 2};
   s21::FastMatrix<float> matrix2{3, 3};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -181,8 +181,8 @@ TEST(TestMulMatrix, TestMulMatrixOperatorException5) {
   s21::FastMatrix<float> matrix1{3, 2};
   s21::FastMatrix<float> matrix2{3, 2};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -197,8 +197,8 @@ TEST(TestMulMatrix, TestMulMatrixOperatorException6) {
   s21::FastMatrix<float> matrix1{2, 3};
   s21::FastMatrix<float> matrix2{2, 3};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -213,8 +213,8 @@ TEST(TestMulMatrix, TestMulMatrixOperatorException7) {
   s21::FastMatrix<float> matrix1{3, 3};
   s21::FastMatrix<float> matrix2{2, 2};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -229,8 +229,8 @@ TEST(TestMulMatrix, TestMulMatrixOperatorException8) {
   s21::FastMatrix<float> matrix1{2, 2};
   s21::FastMatrix<float> matrix2{3, 3};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -297,8 +297,8 @@ TEST(TestMulMatrix, TestMulMatrixOperatorException13) {
   s21::FastMatrix<float> matrix1{3, 2};
   s21::FastMatrix<float> matrix2{3, 2};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -313,8 +313,8 @@ TEST(TestMulMatrix, TestMulMatrixOperatorException14) {
   s21::FastMatrix<float> matrix1{2, 3};
   s21::FastMatrix<float> matrix2{2, 3};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -329,8 +329,8 @@ TEST(TestMulMatrix, TestMulMatrixOperatorException15) {
   s21::FastMatrix<float> matrix1{3, 3};
   s21::FastMatrix<float> matrix2{2, 2};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -345,8 +345,8 @@ TEST(TestMulMatrix, TestMulMatrixOperatorException16) {
   s21::FastMatrix<float> matrix1{2, 2};
   s21::FastMatrix<float> matrix2{3, 3};
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -374,9 +374,9 @@ TEST(TestMulMatrix, TestMulMatrix1) {
   EXPECT_EQ(check_matrix.get_rows(), 95);
   EXPECT_EQ(check_matrix.get_cols(), 99);
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 1.0);
-  s21_matrix_test_helper::FillMatrix(check_matrix, 98.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 1.0f);
+  s21_matrix_test_helper::FillMatrix(check_matrix, 98.0f);
 
   s21::FastMatrix<float> matrix2_before = matrix2;
   matrix1.MulMatrix(matrix2);
@@ -401,9 +401,9 @@ TEST(TestMulMatrix, TestMulMatrix2) {
   EXPECT_EQ(check_matrix.get_rows(), 99);
   EXPECT_EQ(check_matrix.get_cols(), 99);
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 0.0);
-  s21_matrix_test_helper::FillMatrix(check_matrix, 0.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 0.0f);
+  s21_matrix_test_helper::FillMatrix(check_matrix, 0.0f);
 
   s21::FastMatrix<float> matrix2_before = matrix2;
   matrix1.MulMatrix(matrix2);
@@ -711,9 +711,9 @@ TEST(TestMulMatrix, TestMulMatrixOperator1) {
   EXPECT_EQ(check_matrix.get_rows(), 95);
   EXPECT_EQ(check_matrix.get_cols(), 99);
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 1.0);
-  s21_matrix_test_helper::FillMatrix(check_matrix, 98.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 1.0f);
+  s21_matrix_test_helper::FillMatrix(check_matrix, 98.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;
@@ -741,9 +741,9 @@ TEST(TestMulMatrix, TestMulMatrixOperator2) {
   EXPECT_EQ(check_matrix.get_rows(), 99);
   EXPECT_EQ(check_matrix.get_cols(), 99);
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 0.0);
-  s21_matrix_test_helper::FillMatrix(check_matrix, 0.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 0.0f);
+  s21_matrix_test_helper::FillMatrix(check_matrix, 0.0f);
 
   s21::FastMatrix<float> matrix1_before = matrix1;
   s21::FastMatrix<float> matrix2_before = matrix2;

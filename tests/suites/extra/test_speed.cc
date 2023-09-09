@@ -158,7 +158,7 @@ TEST(TestSpeed, TestCopy1) {
 
   s21::FastMatrix<float> matrix1(rows, cols);
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 2.1);
+  s21_matrix_test_helper::FillMatrix(matrix1, 2.1f);
 
   auto start = std::chrono::steady_clock::now();
   s21::FastMatrix<float> matrix2(matrix1);
@@ -179,7 +179,7 @@ TEST(TestSpeed, TestMove1) {
 
   s21::FastMatrix<float> matrix1(rows, cols);
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 2.1);
+  s21_matrix_test_helper::FillMatrix(matrix1, 2.1f);
   s21::FastMatrix<float> matrix_copy1 = matrix1;
   s21::FastMatrix<float> matrix_copy2 = matrix1;
 
@@ -216,8 +216,8 @@ TEST(TestSpeed, TestEq1) {
   s21::FastMatrix<float> matrix1(rows, cols);
   s21::FastMatrix<float> matrix2(rows, cols);
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 1.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 1.0f);
 
   auto start1 = std::chrono::steady_clock::now();
   bool result = matrix1 == matrix2;
@@ -242,8 +242,8 @@ TEST(TestSpeed, TestSum1) {
   s21::FastMatrix<float> matrix1(rows, cols);
   s21::FastMatrix<float> matrix2(rows, cols);
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   auto start = std::chrono::steady_clock::now();
   matrix1.SumMatrix(matrix2);
@@ -278,8 +278,8 @@ TEST(TestSpeed, TestSum2) {
   s21::FastMatrix<float> matrix1(rows, cols);
   s21::FastMatrix<float> matrix2(rows, cols);
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   auto start = std::chrono::steady_clock::now();
   matrix1.SumMatrix(matrix2);
@@ -314,8 +314,8 @@ TEST(TestSpeed, TestSub1) {
   s21::FastMatrix<float> matrix1(rows, cols);
   s21::FastMatrix<float> matrix2(rows, cols);
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   auto start = std::chrono::steady_clock::now();
   matrix1.SubMatrix(matrix2);
@@ -350,8 +350,8 @@ TEST(TestSpeed, TestSub2) {
   s21::FastMatrix<float> matrix1(rows, cols);
   s21::FastMatrix<float> matrix2(rows, cols);
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   auto start = std::chrono::steady_clock::now();
   matrix1.SubMatrix(matrix2);
@@ -383,7 +383,7 @@ TEST(TestSpeed, TestMulNumber1) {
             << " * 2.0" << std::endl;
 
   s21::FastMatrix<float> matrix1(rows, cols);
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
 
   auto start1 = std::chrono::steady_clock::now();
   s21::FastMatrix<float> result = matrix1 * 2.0;
@@ -415,7 +415,7 @@ TEST(TestSpeed, TestMulNumber2) {
             << " * 2.0" << std::endl;
 
   s21::FastMatrix<float> matrix1(rows, cols);
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
 
   auto start1 = std::chrono::steady_clock::now();
   s21::FastMatrix<float> result = matrix1 * 2.0;
@@ -450,8 +450,8 @@ TEST(TestSpeed, TestMulMatrix1) {
             << " * "
             << "[" << rows << " x " << cols << "]" << std::endl;
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> matrix3 = matrix1;
 
@@ -488,8 +488,8 @@ TEST(TestSpeed, TestMulMatrix2) {
             << " * "
             << "[" << rows << " x " << cols << "]" << std::endl;
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   auto start1 = std::chrono::steady_clock::now();
   s21::FastMatrix<float> result = matrix1 * matrix2;
@@ -525,8 +525,8 @@ TEST(TestSpeed, TestMulMatrix3) {
             << " * "
             << "[" << rows << " x " << 1 << "]" << std::endl;
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   auto start1 = std::chrono::steady_clock::now();
   s21::FastMatrix<float> result = matrix1 * matrix2;
@@ -562,8 +562,8 @@ TEST(TestSpeed, TestMulMatrix4) {
             << " * "
             << "[" << rows << " x " << 1 << "]" << std::endl;
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   auto start1 = std::chrono::steady_clock::now();
   s21::FastMatrix<float> result = matrix1 * matrix2;
@@ -599,8 +599,8 @@ TEST(TestSpeed, TestMulMatrix5) {
             << " * "
             << "[" << rows << " x " << 1 << "]" << std::endl;
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   auto start1 = std::chrono::steady_clock::now();
   s21::FastMatrix<float> result = matrix1 * matrix2;
@@ -635,8 +635,8 @@ TEST(TestSpeed, TestGemmMatrix1) {
             << " * "
             << "[" << rows << " x " << cols << "]" << std::endl;
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> result0{rows, cols};
   s21::FastMatrix<float> result1 = result0;
@@ -720,8 +720,8 @@ TEST(TestSpeed, TestGemmMatrix2) {
             << " * "
             << "[" << rows << " x " << 1 << "]" << std::endl;
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> result0{rows, 1};
   s21::FastMatrix<float> result1 = result0;
@@ -805,8 +805,8 @@ TEST(TestSpeed, TestGemmMatrix3) {
             << " * "
             << "[" << rows << " x " << 1 << "]" << std::endl;
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> result0{rows, 1};
   s21::FastMatrix<float> result1 = result0;
@@ -890,8 +890,8 @@ TEST(TestSpeed, TestGemmMatrix4) {
             << " * "
             << "[" << rows << " x " << 1 << "]" << std::endl;
 
-  s21_matrix_test_helper::FillMatrix(matrix1, 1.0);
-  s21_matrix_test_helper::FillMatrix(matrix2, 2.0);
+  s21_matrix_test_helper::FillMatrix(matrix1, 1.0f);
+  s21_matrix_test_helper::FillMatrix(matrix2, 2.0f);
 
   s21::FastMatrix<float> result0{cols, 1};
   s21::FastMatrix<float> result1 = result0;

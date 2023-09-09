@@ -31,7 +31,7 @@ TEST(TestConstructor, TestConstructorParams1) {
   EXPECT_EQ(matrix_check.get_rows(), 5);
   EXPECT_EQ(matrix_check.get_cols(), 4);
 
-  s21_matrix_test_helper::CheckMatrix(matrix_check, 0.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_check, 0.0f);
 }
 
 TEST(TestConstructor, TestConstructorParams2) {
@@ -39,7 +39,7 @@ TEST(TestConstructor, TestConstructorParams2) {
   EXPECT_EQ(matrix_check.get_rows(), 999);
   EXPECT_EQ(matrix_check.get_cols(), 1999);
 
-  s21_matrix_test_helper::CheckMatrix(matrix_check, 0.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_check, 0.0f);
 }
 
 TEST(TestConstructor, TestConstructorCopy1) {
@@ -58,8 +58,8 @@ TEST(TestConstructor, TestConstructorCopy1) {
   EXPECT_EQ(matrix_copy.get_cols(), 2);
   EXPECT_EQ(matrix_copy.get_rows(), 2);
 
-  s21_matrix_test_helper::CheckMatrix(matrix_check, 4.0);
-  s21_matrix_test_helper::CheckMatrix(matrix_copy, 4.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_check, 4.0f);
+  s21_matrix_test_helper::CheckMatrix(matrix_copy, 4.0f);
 }
 
 TEST(TestConstructor, TestConstructorCopy2) {
@@ -78,8 +78,8 @@ TEST(TestConstructor, TestConstructorCopy2) {
   EXPECT_EQ(matrix_copy.get_cols(), 2);
   EXPECT_EQ(matrix_copy.get_rows(), 2);
 
-  s21_matrix_test_helper::CheckMatrix(matrix_check, 4.0);
-  s21_matrix_test_helper::CheckMatrix(matrix_copy, 4.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_check, 4.0f);
+  s21_matrix_test_helper::CheckMatrix(matrix_copy, 4.0f);
 
   std::cout << matrix_copy << std::endl;
 }
@@ -91,7 +91,7 @@ TEST(TestConstructor, TestConstructorMove1) {
   EXPECT_EQ(matrix_check.get_cols(), 5);
   EXPECT_EQ(matrix_check.get_rows(), 5);
 
-  s21_matrix_test_helper::CheckMatrix(matrix_check, 0.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_check, 0.0f);
 }
 
 TEST(TestConstructor, TestConstructorMove2) {
@@ -105,7 +105,7 @@ TEST(TestConstructor, TestConstructorMove2) {
   EXPECT_EQ(matrix_test.get_rows(), 0);
   EXPECT_EQ(matrix_test.get_rows(), 0);
 
-  s21_matrix_test_helper::CheckMatrix(matrix_check, 2.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_check, 2.0f);
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -126,8 +126,8 @@ TEST(TestConstructor, TestAssignmentCopy) {
   EXPECT_EQ(matrix_test.get_rows(), 5);
   EXPECT_EQ(matrix_test.get_rows(), 5);
 
-  s21_matrix_test_helper::CheckMatrix(matrix_test, 2.0);
-  s21_matrix_test_helper::CheckMatrix(matrix_check, 2.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_test, 2.0f);
+  s21_matrix_test_helper::CheckMatrix(matrix_check, 2.0f);
 }
 
 TEST(TestConstructor, TestAssignmentMove1) {
@@ -144,7 +144,7 @@ TEST(TestConstructor, TestAssignmentMove1) {
   EXPECT_EQ(matrix_test.get_rows(), 5);
   EXPECT_EQ(matrix_test.get_rows(), 5);
 
-  s21_matrix_test_helper::CheckMatrix(matrix_check, 2.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_check, 2.0f);
 }
 
 TEST(TestConstructor, TestAssignmentMove2) {
@@ -161,5 +161,5 @@ TEST(TestConstructor, TestAssignmentMove2) {
   EXPECT_EQ(matrix_test.get_rows(), 2);
   EXPECT_EQ(matrix_test.get_rows(), 2);
 
-  s21_matrix_test_helper::CheckMatrix(matrix_check, 2.0);
+  s21_matrix_test_helper::CheckMatrix(matrix_check, 2.0f);
 }
