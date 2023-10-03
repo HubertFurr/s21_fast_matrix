@@ -398,6 +398,51 @@ class FastMatrix {
     }
   }
 
+  static void GemmM2TransposeV0Ref(const Type* matrix_a, const Type* matrix_b,
+                                   Type* matrix_result, int rows_a, int cols_a,
+                                   int rows_b) {
+    for (int i = 0; i < rows_a; ++i) {
+      for (int j = 0; j < rows_b; ++j) {
+        matrix_result[i * rows_b + j] = Type{};
+        for (int k = 0; k < cols_a; ++k) {
+          matrix_result[i * rows_b + j] +=
+              matrix_a[i * cols_a + k] * matrix_b[j * cols_a + k];
+        }
+      }
+    }
+  }
+
+  static void GemmM1TransposeV0Ref(const Type* matrix_a, const Type* matrix_b,
+                                   Type* matrix_result, int rows_a, int cols_a,
+                                   int cols_b) {
+    for (int i = 0; i < cols_a; ++i) {
+      for (int j = 0; j < cols_b; ++j) {
+        matrix_result[i * cols_b + j] = Type{};
+        for (int k = 0; k < rows_a; ++k) {
+          matrix_result[i * cols_b + j] +=
+              matrix_a[k * cols_a + i] * matrix_b[k * cols_b + j];
+        }
+      }
+    }
+  }
+
+  static void GemmM1TransposeV1Ref(const Type* matrix_a, const Type* matrix_b,
+                                   Type* matrix_result, int rows_a, int cols_a,
+                                   int cols_b) {
+    for (int i = 0; i < cols_a; ++i) {
+      for (int j = 0; j < cols_b; ++j) {
+        Type acc{};
+        Type* result_const = matrix_result + i * cols_b + j;
+        const Type* matrix_a_const = matrix_a + i;
+        const Type* matrix_b_const = matrix_b + j;
+        for (int k = 0; k < rows_a; ++k) {
+          acc += matrix_a_const[k * cols_a] * matrix_b_const[k * cols_b];
+        }
+        *result_const = acc;
+      }
+    }
+  }
+
   /**
    * @brief Accessor (Getter) поля rows_.
    *
